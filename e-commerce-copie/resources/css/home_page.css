@@ -1,0 +1,301 @@
+body {
+    position: relative;
+    margin: 0;
+    background-color: rgb(245, 246, 247);
+}
+
+#container {
+    width: 90%;
+    height: 700px;
+    margin: 0 auto;
+}
+
+#language {
+    margin-top: 5px;
+    display: flex;
+    justify-content: end;
+    font-size: x-small;
+    font-family: Mulish, Open Sans, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    color: #47464c;
+}
+
+#menu {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 15px;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 65px;
+}
+
+#logo {
+    width: 145px;
+    height: 145px;
+}
+
+#UFP-container {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 160px;
+}
+
+#UFP-container img {
+    width: 25px;
+    height: 25px;
+}
+
+
+#first-picture {
+    position: relative;
+    bottom: 150px;
+}
+
+#first-picture img:first-of-type {
+    width: 100%;
+    height: 800px;
+    border-radius: 20px;
+}
+
+#first-picture img:nth-of-type(2) {
+    position: absolute;
+    left: 8px;
+    top: -130px;
+    width: 700px;
+}
+
+#first-picture img:nth-of-type(3) {
+    position: absolute;
+    top: -130px;
+    right: 900px;
+    width: 700px;
+}
+
+#first-picture p {
+    position: absolute;
+    top: 300px;
+    left: 30px;
+    font-size: 20px;
+    font-family: Mulish, Open Sans, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    color: #47464c;
+    width: 700px;
+}
+
+#first-picture input {
+    position: absolute;
+    top: 445px;
+    left: 30px;
+    width: 200px;
+    height: 55px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#genre_f h1,
+#collection h1:first-child {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #000000;
+    font-weight: 900;
+}
+
+
+
+
+
+.slider {
+    animation: defilement 40s linear infinite;
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slider:hover {
+    animation-play-state: paused;
+}
+
+
+
+
+
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    top: 160px;
+    left: 10px;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+}
+
+.tiktok:hover {
+    background: #000000;
+    border-radius: 50%;
+}
+
+.wrapper .tiktok:hover,
+.wrapper .tiktok:hover .tooltip,
+.wrapper .tiktok:hover .tooltip::before {
+    background: #000000;
+    color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    top: 100px; /* plus haut pour s'adapter à l'écran */
+    left: 0;
+    justify-content: center;
+    padding-top: 20px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .wrapper .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    margin: 6px;
+  }
+
+  .wrapper .tooltip {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .slider {
+    animation-duration: 30s;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+    body{
+        width: 100%;
+    }
+
+    #container {
+        width: 90%;
+        height: 700px;
+        margin: 0 auto;
+    }
+
+    #first-picture img:first-of-type {
+        height: 800px;
+        width: 700px;
+    }
+
+    #first-picture img:nth-of-type(2) {
+        width: 600px;
+    }
+
+    #first-picture img:nth-of-type(3) {
+        width: 600px;
+        right: 615px;
+    }
+
+    #first-picture p {
+        top: 350px;
+        font-size: 15px;
+        width: px;
+    }
+
+    #first-picture input {
+        top: 480px;
+    }
+
+    #fleche {
+        top: 490px;
+    }
+
+}
